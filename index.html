@@ -1,0 +1,26 @@
+<doctype html>
+<html>
+<head>
+	<title>Next Few Dates</title>	
+</head>
+<body>
+	<label>Amt of Dates:</label>
+	<input type="text" id="numDates" maxlength="1" size="1"></input>
+.	<button id="but1">Date</button>
+	<button id="clear">Clear</button>
+	
+	<div id="dateList"></div>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/dates.js"></script>
+	
+	<script>
+		$('#but1').click(function(){
+			DATES.getDates($('#dateList'));
+		});
+		$('#clear').click(function(){
+			$('#dateList').html('');
+		});
+	</script>
+</body>
+</html>
